@@ -1,9 +1,9 @@
-var exec = require('cordova/exec');
+var cordova = require('cordova');
 
 function YoutubeVideoPlayer() {}
 
 YoutubeVideoPlayer.prototype.openVideo = function(YTid, callback) {
-	exec(function(result) {
+	cordova.exec(function(result) {
 		console.log(result);
 		if(callback){
 			callback('closed');
